@@ -1,0 +1,20 @@
+I always split my code into several folders
+- activities: folders for all android app pages (called Activites)
+- adapters: folders for all data adapters for each list view, or grid view in the apps (mostly custom adapter)
+- asynchronous: is a folders for all code interfacing the API, to get, or send data to the web service
+- datasource: is a folder to manage the database inside the app (either fixed data storage, or just cache)
+- dialogs: folder to store all codes related to custom dialogs that I created
+- fragments: to store Android Fragments (one layer above Activities)
+- models: to store a class for each data that I get from the web service (so for each record, I only need to create new object from this class)
+- receivers & services: to store broadcast receiver and background service (if necessary)
+- utils: all utility code like date formater etc
+- widgets: to store custom widgets either from other source, or self made
+
+
+AttributeSearchActivity.java
+- This activity is a page to search some custom attribute depends on the store that the sales has visited
+- This activity linked to:
+	AttributeDataSource to get the data from the database
+	AttributeSearchAdapter to manage custom list of the data
+	AttributesItem as an object for each attribute (represented on an Array List for a list of attribute data)
+- AsyncAttr is a code to get attribute data from webservice.
